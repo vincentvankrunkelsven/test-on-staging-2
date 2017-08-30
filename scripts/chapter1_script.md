@@ -1,4 +1,4 @@
----
+--- video_exercise_key:6743d164a0
 
 Hi, I'm Andrew Bray. I'm an Assistant Professor of Statistics at Reed College and I'll be your instructor for this course on Exploratory Data Analysis, or E-D-A.
 
