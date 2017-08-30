@@ -112,3 +112,10 @@ test_error()
 
 success_msg("Good work!")
 ```
+
+--- type:VideoExercise lang:r xp:50 skills:1 key:6743d164a0
+## Testing
+
+
+*** =video_hls
+https://videos.datacamp.com/transcoded/1796_intro-stats-eda/v1/hls-ch0_0.master.m3u8
