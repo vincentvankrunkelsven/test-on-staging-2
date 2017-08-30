@@ -1,0 +1,19 @@
+---
+
+Hi, I'm Andrew Bray. I'm an Assistant Professor of Statistics at Reed College and I'll be your instructor for this course on Exploratory Data Analysis, or E-D-A.
+
+In this course, you'll be exploring data from a wide range of contexts. The first data set comes from comic books. Two publishers, Marvel and DC, have created a host of superheroes that have made their way into popular culture. You're probably familiar with Batman and Spiderman, but what about Mor the Mighty?
+
+The comics data set has information on all comic characters that have been introduced by DC and Marvel. If we type the name of the data set at the console, we get the first few rows and columns. Here we see that each row, or case, is a different character and each column, or variable, is a different observation made on that character. At the top it tell us the dimensions of this data set: over 23,000 cases and 11 variables. Right under the variable names, it tells us that all three of these are factors, R's preferred way to represent categorial variables. The first case is Peter Parker, alias: Spiderman. The second column shows that his personal identity is kept secret and the third column tell us that his alignment is good - that he's a super-hero, not a super villain. At the bottom we see that there are 8 additional variables that aren't shown here, including eye color and hair color, almost all of which are also factors.
+
+We can learn the different levels of a particular factor by using the levels function. It's clear that the alignment variable can be "good" or "neutral" but what other values are possible? If we run levels on the align column, we learn that there are in fact four possible alignments, including reformed criminal. I'm glad we checked that! If we do the same for identity, we learn that there are five possible identities.
+
+A common way to represent the number of cases that fall into each combination of levels of two categorial variables like these is with a contingency table. In R this is done with the table command, which takes as arguments the variables that you're interested in. The output tells us that the most common category, at a count of 4493, was bad characters with secret identities.
+
+While tables of counts can be useful, you can get the bigger picture by translating these counts into a graphic. The graphics that you'll be making in this course utilize the ggplot2 package, which you got a glimpse of in the previous course. Every ggplot requires that you specify three elements: the data set, the variables you're interested in, then layers to describe how those variables are plotted.
+
+The data set is the first argument in the ggplot function. The variables are usually found inside the the aes function, which stands for aesthetics. We're interested in the relationship between two categorical variables, which is represented well by a stacked bar chart. So we can specify that the want id on the x axis, then the fill in each segment of the bar to be colored by alignment. Finally, we add the geometry layer to specify that this is a bar chart.
+
+Let's look carefully at how this is constructed: each colored bar segment actually corresponds to a count in our table, with the x-axis and the fill color indicating the category that we're looking at. Several things pop out, like the fact that there are very few characters whose identify is unknown but there are many where we don't have data - that's what the NAs mean. The single largest bar segment corresponds to the most common category: characters with secret identities that are also bad. We can look across the identity types, though, and realize that bad is not always the largest category. This indicates that there is indeed an association between alignment and identity.
+
+That should be enough to get started. Now it's your turn to start exploring the data.
