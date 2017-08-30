@@ -119,3 +119,6 @@ success_msg("Good work!")
 
 *** =video_hls
 https://videos.datacamp.com/transcoded/1796_intro-stats-eda/v1/hls-ch0_0.master.m3u8
+*** =projector_key
+6516924c433b33d33772198c7c9ff3f3
+
