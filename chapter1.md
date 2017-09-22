@@ -7,6 +7,7 @@ attachments :
 --- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:d000678d58
 ## A really bad movie
 
+
 Have a look at the plot that showed up in the viewer to the right. Which type of movie has the worst rating assigned to it?
 
 *** =instructions
@@ -14,6 +15,7 @@ Have a look at the plot that showed up in the viewer to the right. Which type of
 - Action
 - Animation
 - Comedy
+- Test
 
 *** =hint
 Have a look at the plot. Which color does the point with the lowest rating have?
@@ -32,6 +34,7 @@ ggplot(movies, aes(x = runtime, y = rating, col = genre)) + geom_point()
 
 *** =sct
 ```{r}
+
 # SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
 
 msg_bad <- "That is not correct!"
